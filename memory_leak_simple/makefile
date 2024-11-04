@@ -1,8 +1,10 @@
 CC = gcc
-CFLAGS = -g -Wall -Wextra
-LDFLAGS =
 
-VALGRIND=valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --read-var-info=yes --tool=memcheck
+CFLAGS= -Wall -Wextra
+#CFLAGS = -g -Wall -Wextra
+
+VALGRIND=valgrind
+#VALGRIND=valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --read-var-info=yes --tool=memcheck
 
 HEADERS = $(wildcard *.h)
 
