@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS= -Wall -Wextra
+CFLAGS= -O2 -Wall -Wextra
 #CFLAGS = -g -Wall -Wextra
 
 VALGRIND=valgrind
