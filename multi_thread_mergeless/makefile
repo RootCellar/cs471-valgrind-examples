@@ -1,10 +1,7 @@
-CC = gcc
-
-CFLAGS= -std=c++17
-#CFLAGS = -g -Wall -Wextra
+CC = g++
+CFLAGS = -g -Wall -Wextra -std=c++17
 
 VALGRIND=valgrind
-#VALGRIND=valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --read-var-info=yes --tool=memcheck
 
 all: test_merge test_mergless merge mergless
 
@@ -12,14 +9,14 @@ clean:
 	rm -f test_mergless
 	rm -f test_merge
 
-merge: 
+merge: test_merge
 	$(VALGRIND) ./test_merge
 
-mergless:
-	$(VALGRIND) ./test_mergless
+mergeless: test_mergeless
+	$(VALGRIND) ./test_mergeless
 
-test_mergless:
-	$(CC) $(CFLAGS) -o test_mergless mergless.cpp
+test_mergeless:
+	$(CC) $(CFLAGS) -o test_mergeless mergeless.cpp
 
 test_merge:
 	$(CC) $(CFLAGS) -o test_merge merge.cpp
