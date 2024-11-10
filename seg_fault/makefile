@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -g3 -Wall -Wextra
-VALGRIND=valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --read-var-info=yes --tool=memcheck
+VALGRIND=valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
 HEADERS = $(wildcard *.h)
 
 PRG_NAME=fault
