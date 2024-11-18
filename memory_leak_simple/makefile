@@ -1,10 +1,10 @@
 CC = gcc
 
-CFLAGS= -O2 -Wall -Wextra
-#CFLAGS = -g -Wall -Wextra
+#CFLAGS= -O2 -Wall -Wextra
+CFLAGS = -g -Wall -Wextra
 
-VALGRIND=valgrind
-#VALGRIND=valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
+#VALGRIND=valgrind
+VALGRIND=valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes
 
 HEADERS = $(wildcard *.h)
 
